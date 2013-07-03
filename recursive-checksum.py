@@ -3,9 +3,12 @@
 import os
 import os.path
 import sys
+import hashlib
 
-# import hashlib.sha1 as checksum
-import hashlib.md5 as checksum
+#checksum = hashlib.sha1
+# outputSuffix = ".sha1"
+checksum = hashlib.md5
+outputSuffix = ".md5"
 
 # ignoreFileList = [".gitignore", ".gitsubmodule"]
 ignoreFileList = []
