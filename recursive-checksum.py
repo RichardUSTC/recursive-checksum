@@ -22,8 +22,8 @@ def getChecksum(f):
 
 
 def recursiveChecksum(dirName):
-    outputFileName = dirName.replace("/", "_")
-    with open(outputFileName+".sha1", "w") as fout:
+    outputFileName = dirName.replace("/", "_").replace(".", "_")
+    with open(outputFileName+outputSuffix, "w") as fout:
         for root, subdirs, files in os.walk(dirName):
             print "Processing ", root
             for f in files:
